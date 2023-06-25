@@ -38,24 +38,54 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ],
               ),
-              child: const SafeArea(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: SafeArea(
+                child: Column(
                   children: <Widget>[
-                    SizedBox(
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.menu, color: Colors.white, size: 30),
-                          SizedBox(width: 20),
-                          Text('Standard',
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        SizedBox(
+                          child: Row(
+                            children: <Widget>[
+                              Icon(Icons.menu, color: Colors.white, size: 30),
+                              SizedBox(width: 20),
+                              Text('Standard',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white,
+                                      fontSize: 20)),
+                            ],
+                          ),
+                        ),
+                        Icon(Icons.account_circle,
+                            color: Colors.white, size: 30),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(30),
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: HexColor('1D1D1D'),
+                        ),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            Text(
+                              '1620',
                               style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white,
-                                  fontSize: 20)),
-                        ],
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800,
+                                fontSize: 30,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Icon(Icons.account_circle, color: Colors.white, size: 30),
                   ],
                 ),
               ),
@@ -74,7 +104,6 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
-
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               width: double.infinity,
