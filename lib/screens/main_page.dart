@@ -70,11 +70,20 @@ class _MainPageState extends State<MainPage> {
                           borderRadius: BorderRadius.circular(10),
                           color: HexColor('1D1D1D'),
                         ),
-                        child: const Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
                             Text(
+                              '5x324',
+                              style: TextStyle(
+                                color: HexColor('aa5bff'),
+                                fontWeight: FontWeight.w800,
+                                fontSize: 15,
+                              ),
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
                               '1620',
                               style: TextStyle(
                                 color: Colors.white,
