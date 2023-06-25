@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/customs_widgets/text.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class MainPage extends StatefulWidget {
@@ -56,6 +57,23 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  TextMod(data: 'MC', color: Colors.grey),
+                  TextMod(data: 'MR', color: Colors.grey),
+                  TextMod(data: 'M+', color: Colors.white),
+                  TextMod(data: 'M-', color: Colors.white),
+                  TextMod(data: 'MS', color: Colors.white),
+                  TextMod(data: 'M*', color: Colors.grey),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.red,
             ),
           ],
         ),
