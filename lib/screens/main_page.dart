@@ -13,25 +13,37 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          return Column(
-            children: <Widget>[
-              Container(
-                width: double.infinity,
-                height: constraints.maxHeight * 0.42,
-                decoration: BoxDecoration(
-                  color: HexColor('#191919'),
+      body: Container(
+        color: HexColor('#191919'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              alignment: Alignment.topCenter,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              width: double.infinity,
+              height: 370,
+              decoration: BoxDecoration(
+                color: HexColor('#191919'),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 12,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: const SafeArea (
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.menu, color: Colors.white),
+                  ],
                 ),
               ),
-              Container(
-                width: double.infinity,
-                height: constraints.maxHeight * 0.58,
-                color: HexColor('#262626'),
-              ),
-            ],
-          );
-        },
+            ),
+          ],
+        ),
       ),
     );
   }
