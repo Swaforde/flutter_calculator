@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_calculator/customs_widgets/buttons.dart';
 import 'package:flutter_calculator/customs_widgets/text.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -73,40 +74,55 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
+
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               width: double.infinity,
-              child: Column(
+              height: 350,
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   SizedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        SizedBox(
-                          width: 70.0,
-                          height: 70.0,
-                          child: Material(
-                            color: Colors.transparent,
-                            elevation: 10,
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                  shadowColor: Colors.black,
-                                  elevation: 10,
-                                  backgroundColor: HexColor(
-                                    '#191919',
-                                  )),
-                              child: const Text(
-                                '%',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 20,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        CalculatorButtonSpec(text: '%'),
+                        CalculatorButtonSpec(text: 'CE'),
+                        CalculatorButtonSpec(text: 'AC'),
+                        CalculatorButtonSpec(text: '/'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        CalculatorButton(text: '7'),
+                        CalculatorButton(text: '8'),
+                        CalculatorButton(text: '9'),
+                        CalculatorButton(text: 'x'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        CalculatorButton(text: '1'),
+                        CalculatorButtonUnique(text: '2'),
+                        CalculatorButton(text: '3'),
+                        CalculatorButton(text: '+'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        CalculatorButton(text: ''),
+                        CalculatorButton(text: '0'),
+                        CalculatorButton(text: '.'),
+                        CalculatorButtonPink(text: '='),
                       ],
                     ),
                   ),
