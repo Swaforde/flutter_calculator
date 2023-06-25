@@ -20,7 +20,7 @@ class _MainPageState extends State<MainPage> {
           children: <Widget>[
             Container(
               alignment: Alignment.topCenter,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               width: double.infinity,
               height: 370,
               decoration: BoxDecoration(
@@ -34,10 +34,25 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ],
               ),
-              child: const SafeArea (
+              child: const SafeArea(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Icon(Icons.menu, color: Colors.white),
+                    SizedBox(
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.menu, color: Colors.white, size: 30),
+                          SizedBox(width: 20),
+                          Text('Standard',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white,
+                                  fontSize: 20)
+                          ),
+                        ],
+                      ),
+                    ),
+                    Icon(Icons.account_circle, color: Colors.white, size: 30),
                   ],
                 ),
               ),
