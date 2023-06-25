@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_calculator/customs_widgets/text.dart';
@@ -48,8 +50,7 @@ class _MainPageState extends State<MainPage> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white,
-                                  fontSize: 20)
-                          ),
+                                  fontSize: 20)),
                         ],
                       ),
                     ),
@@ -73,7 +74,44 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Container(
-              color: Colors.red,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              width: double.infinity,
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        SizedBox(
+                          width: 70.0,
+                          height: 70.0,
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 10,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                  shadowColor: Colors.black,
+                                  elevation: 10,
+                                  backgroundColor: HexColor(
+                                    '#191919',
+                                  )),
+                              child: const Text(
+                                '%',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 20,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
